@@ -1,0 +1,18 @@
+scrapy startproject Scrapy58Userinfo
+cd Scrapy58Userinfo
+scrapy genspider example example.com
+
+scrapy crawl Scrapy58Userinfo
+
+1.
+scrapy.cfg:项目的配置文件
+ScrapyBTKuai/ 该项目的python模块。之后您将在此加入代码
+ScrapyBTKuai/items.py:项目中的item文件
+ScrapyBTKuai/pipelines.py  项目中的pipelines文件
+ScrapyBTKuai/settings.py  项目的设置文件
+ScrapyBTKuai/spiders  放置爬虫代码的目录
+
+2.
+scrapy shell "http://www.btkuai.org/word/%E4%BA%BA%E5%85%BD-49%E9%83%A8-%E5%B0%8F%E5%90%88%E9%9B%86_1.html"
+response.body
+response.xpath('//*[@id="container"]/div/ul/li[3]/div[1]/a/text()').extract()
